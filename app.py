@@ -20,7 +20,7 @@ from src.explainability.explain import get_minimal_subgraph
 from src.utils.graph_viz import ATOM_COLOR, ATOM_MAP 
 
 from src.utils.calibrate import get_predictions_and_labels, compute_ece, plot_calibration_curve
-with open(".streamlit/style.css") as f:
+with open("style.css") as f:
     st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
 DEVICE = torch.device("mps" if torch.backends.mps.is_available() else "cpu")
